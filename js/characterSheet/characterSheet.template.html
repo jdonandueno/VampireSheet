@@ -1,0 +1,499 @@
+<div ng-cloak layout="column" layout-padding>
+    <section>
+        <div md-theme="docs-dark" layout="row" layout-padding>
+            <div layout="column" flex="33">
+                <md-input-container>
+                    <label>Nombre</label>
+                    <input ng-model="user.Nombre">
+                </md-input-container>
+                <md-input-container>
+                    <label>Jugador</label>
+                    <input ng-model="user.Jugador">
+                </md-input-container>
+                <md-input-container>
+                    <label>Crónica</label>
+                    <input ng-model="user.Cronica">
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <md-input-container>
+                    <label>Naturaleza</label>
+                    <input ng-model="user.Naturaleza">
+                </md-input-container>
+                <md-input-container>
+                    <label>Conducta</label>
+                    <input ng-model="user.Conducta">
+                </md-input-container>
+                <md-input-container>
+                    <label>Clan</label>
+                    <input ng-model="user.Clan">
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <md-input-container>
+                    <label>Generacion</label>
+                    <input ng-model="user.Generacion">
+                </md-input-container>
+                <md-input-container>
+                    <label>Refugio</label>
+                    <input ng-model="user.Refugio">
+                </md-input-container>
+                <md-input-container>
+                    <label>Concepto</label>
+                    <input ng-model="user.Concepto">
+                </md-input-container>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="md-headline title">Atributos</h2>
+        <div layout-padding layout="row">
+            <div layout="column" flex="33">
+                <h3 class="md-title title">
+                    Fisicos ({{user.Fuerza - 1 + user.Destreza - 1 + user.Resistencia - 1}})
+                </h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Fuerza ({{user.Fuerza}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Fuerza" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Destreza ({{user.Destreza}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Destreza" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Resistencia ({{user.Resistencia}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Resistencia" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <h3 class="md-title title">
+                    Sociales ({{user.Carisma - 1 + user.Manipulacion - 1 + user.Apariencia - 1}})
+                </h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Carisma ({{user.Carisma}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Carisma" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Manipulacion ({{user.Manipulacion}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Manipulacion" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Apariencia ({{user.Apariencia}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Apariencia" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <h3 class="md-title title">
+                    Mentales ({{user.Percepcion - 1 + user.Inteligencia - 1 + user.Astucia - 1}})
+                </h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Percepción ({{user.Percepcion}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Percepcion" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Inteligencia ({{user.Inteligencia}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Inteligencia" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Astucia {{user.Astucia}})</span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Astucia" step="1" min="1" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="md-headline title">Habilidades</h2>
+        <div layout="row">
+            <div layout="column" flex="33">
+                <h3 class="md-title title">Talentos</h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Alerta <span ng-if="user.Alerta">({{user.Alerta}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Alerta" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Atletismo <span ng-if="user.Atletismo">({{user.Atletismo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Atletismo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Callejeo <span ng-if="user.Callejeo">({{user.Callejeo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Callejeo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Empatía <span ng-if="user.Empatia">({{user.Empatia}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Empatia" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Esquivar <span ng-if="user.Esquivar">({{user.Esquivar}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Esquivar" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Expresión <span ng-if="user.Expresion">({{user.Expresion}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Expresion" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Intimidación <span ng-if="user.Intimidacion">({{user.Intimidacion}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Intimidacion" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Liderazgo <span ng-if="user.Liderazgo">({{user.Liderazgo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Liderazgo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Pelea <span ng-if="user.Pelea">({{user.Pelea}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Pelea" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Subterfugio <span ng-if="user.Subterfugio">({{user.Subterfugio}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Subterfugio" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <h3 class="md-title title">Técnicas</h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Armas C.C <span ng-if="user.ArmasCC">({{user.ArmasCC}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.ArmasCC" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Armas de Fuego <span ng-if="user.ArmasFuego">({{user.ArmasFuego}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.ArmasFuego" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Conducir <span ng-if="user.Conducir">({{user.Conducir}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Conducir" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Etiqueta <span ng-if="user.Etiqueta">({{user.Etiqueta}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Etiqueta" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Interpretación <span ng-if="user.Interpretacion">({{user.Interpretacion}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Interpretacion" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Pericias <span ng-if="user.Pericias">({{user.Pericias}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Pericias" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Seguridad <span ng-if="user.Seguridad">({{user.Seguridad}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Seguridad" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Sigilo <span ng-if="user.Sigilo">({{user.Sigilo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Sigilo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Supervivencia <span ng-if="user.Supervivencia">({{user.Supervivencia}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Supervivencia" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Trato con Animales <span ng-if="user.TratoAnimales">({{user.TratoAnimales}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.TratoAnimales" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+            <div layout="column" flex="33">
+                <h3 class="md-title title">Conocimientos</h3>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Academicismo <span ng-if="user.Academicismo">({{user.Academicismo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Academicismo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Ciencia <span ng-if="user.Ciencia">({{user.Ciencia}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Ciencia" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Finanzas <span ng-if="user.Finanzas">({{user.Finanzas}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Finanzas" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Informática <span ng-if="user.Informatica">({{user.Informatica}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Informatica" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Investigación <span ng-if="user.Investigacion">({{user.Investigacion}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Investigacion" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Leyes <span ng-if="user.Leyes">({{user.Leyes}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Leyes" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Lingüística <span ng-if="user.Linguistica">({{user.Linguistica}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Linguistica" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Medicina <span ng-if="user.Medicina">({{user.Medicina}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Medicina" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Ocultismo <span ng-if="user.Ocultismo">({{user.Ocultismo}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Ocultismo" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+                <md-input-container>
+                    <md-slider-container layout>
+                        <div flex="30" layout layout-align="center center">
+                            <span class="md-body-1">Política <span ng-if="user.Politica">({{user.Politica}})</span></span>
+                        </div>
+                        <md-slider flex md-discrete ng-model="user.Politica" step="1" min="0" max="5">
+                        </md-slider>
+                    </md-slider-container>
+                </md-input-container>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2 class="md-headline title">Ventajas</h2>
+        <div>
+            <div layout="row" layout-padding>
+                <div layout="column" flex="33" layout-padding>
+                    <h3 class="md-title title">Trasfondos</h3>
+                    <form layout="column" ng-repeat="trasfondo in user.Trasfondos track by $index">
+                        <md-autocomplete md-selected-item="user.Trasfondos[$index].nombre" md-items="item in trasfondosDisponibles(searchText)" md-search-text="searchText" md-item-text="item" md-selected-item-change="selectTrasfondo(item, $index)">
+                            <md-item-template>
+                                <span md-highlight-text="searchText">{{item}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                Ningun trasfondo encontrado para "{{searchText}}"
+                            </md-not-found>
+                        </md-autocomplete>
+                        <md-slider-container layout ng-if="user.Trasfondos[$index].nombre">
+                            <md-slider flex md-discrete ng-model="user.Trasfondos[$index].valor" step="1" min="1" max="5">
+                            </md-slider>
+                        </md-slider-container>
+                    </form>
+                </div>
+                <div layout="column" flex="33" layout-padding>
+                    <h3 class="md-title title">Disciplinas</h3>
+                    <form layout="column" ng-repeat="disciplina in user.Disciplinas track by $index">
+                        <md-autocomplete md-selected-item="user.Disciplinas[$index].nombre" md-items="item in disciplinasDisponibles(searchText)" md-search-text="searchText" md-item-text="item" md-selected-item-change="selectDisciplina(item, $index)">
+                            <md-item-template>
+                                <span md-highlight-text="searchText">{{item}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                Ninguna disciplina encontrada para "{{searchText}}"
+                            </md-not-found>
+                        </md-autocomplete>
+                        <md-slider-container layout ng-if="user.Disciplinas[$index].nombre">
+                            <md-slider flex md-discrete ng-model="user.Disciplinas[$index].valor" step="1" min="1" max="5">
+                            </md-slider>
+                        </md-slider-container>
+                    </form>
+                </div>
+                <div layout="column" flex="33" layout-padding>
+                    <h3 class="md-title title">Virtudes</h3>
+                    <md-input-container>
+                        <md-slider-container layout>
+                            <div flex="50" layout layout-align="center center">
+                                <span class="md-body-1">Conciencia/Convicción <span ng-if="user.Conciencia">({{user.Conciencia}})</span></span>
+                            </div>
+                            <md-slider flex md-discrete ng-model="user.Conciencia" step="1" min="0" max="5">
+                            </md-slider>
+                        </md-slider-container>
+                        <md-slider-container layout>
+                            <div flex="50" layout layout-align="center center">
+                                <span class="md-body-1">Autocontrol/Instintos <span ng-if="user.Autocontrol">({{user.Autocontrol}})</span></span>
+                            </div>
+                            <md-slider flex md-discrete ng-model="user.Autocontrol" step="1" min="0" max="5">
+                            </md-slider>
+                        </md-slider-container>
+                        <md-slider-container layout>
+                            <div flex="50" layout layout-align="center center">
+                                <span class="md-body-1">Coraje <span ng-if="user.Coraje">({{user.Coraje}})</span></span>
+                            </div>
+                            <md-slider flex md-discrete ng-model="user.Coraje" step="1" min="0" max="5">
+                            </md-slider>
+                        </md-slider-container>
+                    </md-input-container>
+                </div>
+            </div>
+    </section>
+    </div>
