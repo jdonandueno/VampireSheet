@@ -46,16 +46,20 @@ angular.module("VampireApp").controller("characterSheetController", ["$scope", f
     ];
 
 
-    $scope.trasfondosDisponibles = function(searchText) {
-        return trasfondos.filter(function(item) {
-            return item.toLowerCase().indexOf(searchText) >= 0;
+    this.trasfondosDisponibles = function(searchText) {
+        var filteredTrasfondos = trasfondos.filter(function(item) {
+            return item.toLowerCase().indexOf(searchText) !== -1;
         });
+
+        return filteredTrasfondos;
     };
 
-    $scope.disciplinasDisponibles = function(searchText) {
-        return disciplinas.filter(function(item) {
-            return item.toLowerCase().indexOf(searchText) >= 0;
+    this.disciplinasDisponibles = function(searchText) {
+        var filteredDisciplinas = disciplinas.filter(function(item) {
+            return item.toLowerCase().indexOf(searchText) !== -1;
         });
+
+        return filteredDisciplinas;
     };
 
     $scope.selectTrasfondo = function(trasfondo, i) {

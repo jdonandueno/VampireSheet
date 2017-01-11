@@ -45,6 +45,7 @@
             </div>
         </div>
     </section>
+    <md-divider></md-divider>
     <section>
         <h2 class="md-headline title">Atributos</h2>
         <div layout-padding layout="row">
@@ -146,6 +147,7 @@
             </div>
         </div>
     </section>
+    <md-divider></md-divider>
     <section>
         <h2 class="md-headline title">Habilidades</h2>
         <div layout="row">
@@ -430,6 +432,7 @@
             </div>
         </div>
     </section>
+    <md-divider></md-divider>
     <section>
         <h2 class="md-headline title">Ventajas</h2>
         <div>
@@ -437,12 +440,12 @@
                 <div layout="column" flex="33" layout-padding>
                     <h3 class="md-title title">Trasfondos</h3>
                     <form layout="column" ng-repeat="trasfondo in user.Trasfondos track by $index">
-                        <md-autocomplete md-selected-item="user.Trasfondos[$index].nombre" md-items="item in trasfondosDisponibles(searchText)" md-search-text="searchText" md-item-text="item" md-selected-item-change="selectTrasfondo(item, $index)">
+                        <md-autocomplete md-selected-item="user.Trasfondos[$index].nombre" md-items="item in trasfondosDisponibles(ctrl.searchTextTrasfondos)" md-search-text="ctrl.searchTextTrasfondos" md-item-text="item" md-selected-item-change="selectTrasfondo(item, $index)">
                             <md-item-template>
-                                <span md-highlight-text="searchText">{{item}}</span>
+                                <span md-highlight-text="ctrl.searchTextTrasfondos">{{item}}</span>
                             </md-item-template>
                             <md-not-found>
-                                Ningun trasfondo encontrado para "{{searchText}}"
+                                Ningun trasfondo encontrado para "{{ctrl.searchTextTrasfondos}}"
                             </md-not-found>
                         </md-autocomplete>
                         <md-slider-container layout ng-if="user.Trasfondos[$index].nombre">
@@ -454,12 +457,12 @@
                 <div layout="column" flex="33" layout-padding>
                     <h3 class="md-title title">Disciplinas</h3>
                     <form layout="column" ng-repeat="disciplina in user.Disciplinas track by $index">
-                        <md-autocomplete md-selected-item="user.Disciplinas[$index].nombre" md-items="item in disciplinasDisponibles(searchText)" md-search-text="searchText" md-item-text="item" md-selected-item-change="selectDisciplina(item, $index)">
+                        <md-autocomplete md-selected-item="user.Disciplinas[$index].nombre" md-items="item in ctrl.disciplinasDisponibles(ctrl.searchTextDisciplinas)" md-search-text="ctrl.searchTextDisciplinas" md-item-text="item" md-selected-item-change="selectDisciplina(item, $index)">
                             <md-item-template>
-                                <span md-highlight-text="searchText">{{item}}</span>
+                                <span md-highlight-text="ctrl.searchTextDisciplinas">{{item}}</span>
                             </md-item-template>
                             <md-not-found>
-                                Ninguna disciplina encontrada para "{{searchText}}"
+                                Ninguna disciplina encontrada para "{{ctrl.searchTextDisciplinas}}"
                             </md-not-found>
                         </md-autocomplete>
                         <md-slider-container layout ng-if="user.Disciplinas[$index].nombre">
@@ -496,4 +499,4 @@
                 </div>
             </div>
     </section>
-    </div>
+</div>
